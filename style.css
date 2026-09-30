@@ -1,0 +1,77 @@
+:root {
+  --bg: #0b1014;
+  --panel: #131b22;
+  --line: #24323d;
+  --text: #e6edf3;
+  --muted: #8a9aa8;
+  --gold: #e8b931;
+  --cyan: #3dd6d0;
+  --wall: #1a242c;
+  --open: #182028;
+  --visited: rgba(61, 214, 208, .18);
+  --path: rgba(232, 185, 49, .35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  padding: 2rem 0 1.25rem;
+  background: linear-gradient(180deg, #101922 0%, var(--bg) 100%);
+}
+.site-header h1 {
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  color: var(--gold);
+  margin: 0;
+}
+.tagline { color: var(--muted); margin: .4rem 0 0; }
+
+.status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  min-height: 1.3rem;
+}
+.status.error { color: #ff7b72; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem;
+}
+.panel-title { font-weight: 700; margin-bottom: .75rem; }
+
+.canvas-panel { display: flex; align-items: center; justify-content: center; }
+#mazeCanvas { max-width: 100%; image-rendering: pixelated; border-radius: 4px; cursor: pointer; }
+
+.form-select, .form-control {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--text);
+}
+.form-select:focus, .form-control:focus {
+  background: var(--panel);
+  color: var(--text);
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 .2rem rgba(61, 214, 208, .2);
+}
+.form-range::-webkit-slider-thumb { background: var(--cyan); }
+.form-range::-moz-range-thumb { background: var(--cyan); }
+
+.stat-list { margin: 0; }
+.stat-list > div { display: flex; justify-content: space-between; padding: .3rem 0; border-bottom: 1px solid var(--line); }
+.stat-list > div:last-child { border-bottom: none; }
+.stat-list dt { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: var(--muted); font-weight: 400; }
+.stat-list dd { margin: 0; font-weight: 700; color: var(--cyan); }
+
+#editorMsg.text-danger { color: #ff7b72 !important; }
+#editorMsg.text-success { color: var(--cyan) !important; }
+
+button.active-toggle { color: var(--bg) !important; background: var(--cyan) !important; border-color: var(--cyan) !important; }

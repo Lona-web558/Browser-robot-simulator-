@@ -1,0 +1,13 @@
+{
+  "name": "browser-robot-simulator",
+  "version": "1.0.0",
+  "description": "Canvas-based maze robot simulator with BFS and wall-follower algorithms: Express backend, Bootstrap frontend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
